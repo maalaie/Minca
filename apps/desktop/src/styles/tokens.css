@@ -1,0 +1,8 @@
+import { getCssCustomProperties } from '@mnc/ui-kit';
+
+// Inject CSS custom properties (design tokens) into the document
+const styleElement = document.createElement('style');
+styleElement.textContent = getCssCustomProperties();
+document.head.appendChild(styleElement);
+
+export {};
