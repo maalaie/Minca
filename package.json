@@ -1,0 +1,41 @@
+{
+  "name": "mnc-workbench",
+  "version": "0.1.0",
+  "description": "INCA-inspired automotive measurement and calibration workbench",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @mnc/desktop dev",
+    "tauri:dev": "pnpm --filter @mnc/desktop tauri:dev",
+    "build": "pnpm --filter @mnc/desktop build",
+    "tauri:build": "pnpm --filter @mnc/desktop tauri:build",
+    "typecheck": "pnpm --filter \"@mnc/*\" typecheck",
+    "lint": "pnpm --filter \"@mnc/*\" lint",
+    "format": "prettier --write \"apps/**/src/**/*.{ts,tsx}\" \"packages/**/src/**/*.{ts,tsx}\"",
+    "test": "pnpm --filter @mnc/desktop test",
+    "test:ui": "pnpm --filter @mnc/desktop test:ui",
+    "test:visual": "pnpm --filter @mnc/desktop test:visual",
+    "check": "pnpm typecheck && pnpm lint && pnpm test && cargo check --manifest-path apps/desktop/src-tauri/Cargo.toml"
+  },
+  "keywords": [
+    "automotive",
+    "measurement",
+    "calibration",
+    "XCP",
+    "CAN",
+    "ECU",
+    "Tauri",
+    "React"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
+  },
+  "packageManager": "pnpm@9.0.0"
+}
